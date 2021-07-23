@@ -15,19 +15,19 @@ extension HomeVC {
     private func setupConstraint(){
         self.view.backgroundColor = .white
         self.view.addSubview(latButton)
-        latButton.backgroundColor = .green
         latButton.snp.makeConstraints { (make) -> Void in
-            make.width.height.equalTo(50)
+            make.height.equalTo(50)
+            make.width.equalTo(100)
             make.center.equalTo(self.view)
         }
-        latButton.addTarget(self, action: #selector(tappedSetLat), for: .touchUpInside)
-    }
-    
-    @objc func tappedSetLat(){
-        let vc = CoordinateVC()
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true) {
-            
+        self.view.addSubview(lonButton)
+        lonButton.snp.makeConstraints { (make) -> Void in
+            make.height.equalTo(50)
+            make.width.equalTo(100)
+            make.centerX.equalTo(self.view)
+            make.bottom.equalTo(latButton).offset(50)
         }
+        latButton.addTarget(self, action: #selector(tappedSetLat), for: .touchUpInside)
+        lonButton.addTarget(self, action: #selector(tappedSetLon), for: .touchUpInside)
     }
 }
