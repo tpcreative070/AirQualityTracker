@@ -7,10 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3116F13326AABA94003013A6 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F13226AABA94003013A6 /* Dependencies.swift */; };
+		3116F13F26AABE16003013A6 /* AirQualityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F13E26AABE16003013A6 /* AirQualityVC.swift */; };
+		3116F14126AABE4A003013A6 /* AirQualityVC+ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F14026AABE4A003013A6 /* AirQualityVC+ViewFactory.swift */; };
+		3116F14326AABE8D003013A6 /* CoordinateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F14226AABE8D003013A6 /* CoordinateVC.swift */; };
+		3116F14C26AAC913003013A6 /* PersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F14B26AAC913003013A6 /* PersistenceError.swift */; };
+		3116F14E26AAC94C003013A6 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F14D26AAC94C003013A6 /* Protocol.swift */; };
+		3116F15326AACB55003013A6 /* CoordinateServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F15226AACB55003013A6 /* CoordinateServiceImpl.swift */; };
+		3116F15526AACBE4003013A6 /* AirQualityServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F15426AACBE4003013A6 /* AirQualityServiceImpl.swift */; };
+		3116F15826AAF204003013A6 /* CoordinateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F15726AAF204003013A6 /* CoordinateModel.swift */; };
+		3116F15A26AAF220003013A6 /* AirQualityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F15926AAF220003013A6 /* AirQualityModel.swift */; };
+		3116F15D26AB0437003013A6 /* ClientServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F15C26AB0437003013A6 /* ClientServiceImpl.swift */; };
+		3116F15F26AB0C05003013A6 /* CoordinateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F15E26AB0C05003013A6 /* CoordinateViewModel.swift */; };
+		312FDBB426A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312FDBB326A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift */; };
+		312FDBB626A9E643007BB4C2 /* HomeVC+ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312FDBB526A9E643007BB4C2 /* HomeVC+ViewFactory.swift */; };
 		31639F8826A99DD500F5D0E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31639F8726A99DD500F5D0E7 /* AppDelegate.swift */; };
 		31639F8A26A99DD500F5D0E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31639F8926A99DD500F5D0E7 /* SceneDelegate.swift */; };
-		31639F8C26A99DD500F5D0E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31639F8B26A99DD500F5D0E7 /* ViewController.swift */; };
-		31639F8F26A99DD500F5D0E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31639F8D26A99DD500F5D0E7 /* Main.storyboard */; };
+		31639F8C26A99DD500F5D0E7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31639F8B26A99DD500F5D0E7 /* HomeVC.swift */; };
 		31639F9126A99DD800F5D0E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31639F9026A99DD800F5D0E7 /* Assets.xcassets */; };
 		31639F9426A99DD800F5D0E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31639F9226A99DD800F5D0E7 /* LaunchScreen.storyboard */; };
 		31639F9F26A99DD800F5D0E7 /* AirQualityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31639F9E26A99DD800F5D0E7 /* AirQualityTests.swift */; };
@@ -45,6 +58,7 @@
 		3163A02C26A9B66000F5D0E7 /* RxBlocking.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A02126A9B65A00F5D0E7 /* RxBlocking.xcframework */; };
 		3163A02D26A9B66000F5D0E7 /* RxCocoa.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A02226A9B65F00F5D0E7 /* RxCocoa.xcframework */; };
 		3163A02E26A9B66000F5D0E7 /* RxRelay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A02326A9B66000F5D0E7 /* RxRelay.xcframework */; };
+		3163A03026A9B91800F5D0E7 /* SnapKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A02F26A9B91800F5D0E7 /* SnapKit.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,11 +92,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3116F13226AABA94003013A6 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		3116F13E26AABE16003013A6 /* AirQualityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityVC.swift; sourceTree = "<group>"; };
+		3116F14026AABE4A003013A6 /* AirQualityVC+ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AirQualityVC+ViewFactory.swift"; sourceTree = "<group>"; };
+		3116F14226AABE8D003013A6 /* CoordinateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateVC.swift; sourceTree = "<group>"; };
+		3116F14B26AAC913003013A6 /* PersistenceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceError.swift; sourceTree = "<group>"; };
+		3116F14D26AAC94C003013A6 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		3116F15226AACB55003013A6 /* CoordinateServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateServiceImpl.swift; sourceTree = "<group>"; };
+		3116F15426AACBE4003013A6 /* AirQualityServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityServiceImpl.swift; sourceTree = "<group>"; };
+		3116F15726AAF204003013A6 /* CoordinateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateModel.swift; sourceTree = "<group>"; };
+		3116F15926AAF220003013A6 /* AirQualityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityModel.swift; sourceTree = "<group>"; };
+		3116F15C26AB0437003013A6 /* ClientServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientServiceImpl.swift; sourceTree = "<group>"; };
+		3116F15E26AB0C05003013A6 /* CoordinateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateViewModel.swift; sourceTree = "<group>"; };
+		312FDBB326A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoordinateVC+ViewFactory.swift"; sourceTree = "<group>"; };
+		312FDBB526A9E643007BB4C2 /* HomeVC+ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+ViewFactory.swift"; sourceTree = "<group>"; };
 		31639F8426A99DD500F5D0E7 /* AirQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31639F8726A99DD500F5D0E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31639F8926A99DD500F5D0E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		31639F8B26A99DD500F5D0E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		31639F8E26A99DD500F5D0E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		31639F8B26A99DD500F5D0E7 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		31639F9026A99DD800F5D0E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31639F9326A99DD800F5D0E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31639F9526A99DD800F5D0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,6 +149,7 @@
 		3163A02126A9B65A00F5D0E7 /* RxBlocking.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RxBlocking.xcframework; sourceTree = "<group>"; };
 		3163A02226A9B65F00F5D0E7 /* RxCocoa.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RxCocoa.xcframework; sourceTree = "<group>"; };
 		3163A02326A9B66000F5D0E7 /* RxRelay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RxRelay.xcframework; sourceTree = "<group>"; };
+		3163A02F26A9B91800F5D0E7 /* SnapKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SnapKit.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +161,7 @@
 				3163A01326A9B2D600F5D0E7 /* GoogleMaps.framework in Frameworks */,
 				3163A02926A9B66000F5D0E7 /* PKHUD.xcframework in Frameworks */,
 				3163A02E26A9B66000F5D0E7 /* RxRelay.xcframework in Frameworks */,
+				3163A03026A9B91800F5D0E7 /* SnapKit.xcframework in Frameworks */,
 				3163A01226A9B2D600F5D0E7 /* GoogleMapsM4B.framework in Frameworks */,
 				31639FF326A9A60A00F5D0E7 /* UIKit.framework in Frameworks */,
 				31639FF126A9A60200F5D0E7 /* SystemConfiguration.framework in Frameworks */,
@@ -178,6 +207,108 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3116F13426AABABB003013A6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				3116F14D26AAC94C003013A6 /* Protocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		3116F13526AABBCF003013A6 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				3116F13226AABA94003013A6 /* Dependencies.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		3116F13626AABC62003013A6 /* Coordinate */ = {
+			isa = PBXGroup;
+			children = (
+				3116F13A26AABDD7003013A6 /* Model */,
+				3116F13926AABDCB003013A6 /* ViewModel */,
+				3116F13826AABDC3003013A6 /* View */,
+			);
+			path = Coordinate;
+			sourceTree = "<group>";
+		};
+		3116F13726AABC6C003013A6 /* AirQuality */ = {
+			isa = PBXGroup;
+			children = (
+				3116F13D26AABDED003013A6 /* Model */,
+				3116F13C26AABDE3003013A6 /* ViewModel */,
+				3116F13B26AABDDD003013A6 /* View */,
+			);
+			path = AirQuality;
+			sourceTree = "<group>";
+		};
+		3116F13826AABDC3003013A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3116F14226AABE8D003013A6 /* CoordinateVC.swift */,
+				312FDBB326A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3116F13926AABDCB003013A6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3116F15E26AB0C05003013A6 /* CoordinateViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3116F13A26AABDD7003013A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3116F15726AAF204003013A6 /* CoordinateModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3116F13B26AABDDD003013A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3116F13E26AABE16003013A6 /* AirQualityVC.swift */,
+				3116F14026AABE4A003013A6 /* AirQualityVC+ViewFactory.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3116F13C26AABDE3003013A6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3116F13D26AABDED003013A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3116F15926AAF220003013A6 /* AirQualityModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3116F15126AACB1E003013A6 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				3116F15226AACB55003013A6 /* CoordinateServiceImpl.swift */,
+				3116F15426AACBE4003013A6 /* AirQualityServiceImpl.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		3116F15B26AB042A003013A6 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				3116F15C26AB0437003013A6 /* ClientServiceImpl.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		31639F7B26A99DD500F5D0E7 = {
 			isa = PBXGroup;
 			children = (
@@ -203,11 +334,15 @@
 		31639F8626A99DD500F5D0E7 /* AirQuality */ = {
 			isa = PBXGroup;
 			children = (
+				3116F15B26AB042A003013A6 /* DataManager */,
+				3116F15126AACB1E003013A6 /* Impl */,
+				3116F13526AABBCF003013A6 /* Dependencies */,
+				3163A03326A9CA5B00F5D0E7 /* UI */,
+				3116F13426AABABB003013A6 /* Protocol */,
+				3163A03226A9CA5500F5D0E7 /* Common */,
 				31639FB726A99F4800F5D0E7 /* Framework */,
 				31639F8726A99DD500F5D0E7 /* AppDelegate.swift */,
 				31639F8926A99DD500F5D0E7 /* SceneDelegate.swift */,
-				31639F8B26A99DD500F5D0E7 /* ViewController.swift */,
-				31639F8D26A99DD500F5D0E7 /* Main.storyboard */,
 				31639F9026A99DD800F5D0E7 /* Assets.xcassets */,
 				31639F9226A99DD800F5D0E7 /* LaunchScreen.storyboard */,
 				31639F9526A99DD800F5D0E7 /* Info.plist */,
@@ -236,6 +371,7 @@
 		31639FB726A99F4800F5D0E7 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				3163A02F26A9B91800F5D0E7 /* SnapKit.xcframework */,
 				3163A01926A9B64D00F5D0E7 /* Alamofire.xcframework */,
 				3163A01F26A9B65900F5D0E7 /* AlamofireObjectMapper.xcframework */,
 				3163A02026A9B65900F5D0E7 /* ObjcExceptionBridging.xcframework */,
@@ -274,6 +410,57 @@
 				31639FD626A9A39700F5D0E7 /* Accelerate.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3163A03226A9CA5500F5D0E7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3116F14B26AAC913003013A6 /* PersistenceError.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3163A03326A9CA5B00F5D0E7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3116F13726AABC6C003013A6 /* AirQuality */,
+				3116F13626AABC62003013A6 /* Coordinate */,
+				3163A03626A9CA7900F5D0E7 /* Main */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3163A03626A9CA7900F5D0E7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3163A03926A9CA8D00F5D0E7 /* View */,
+				3163A03826A9CA8700F5D0E7 /* ViewModel */,
+				3163A03726A9CA8300F5D0E7 /* Model */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3163A03726A9CA8300F5D0E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3163A03826A9CA8700F5D0E7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3163A03926A9CA8D00F5D0E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				31639F8B26A99DD500F5D0E7 /* HomeVC.swift */,
+				312FDBB526A9E643007BB4C2 /* HomeVC+ViewFactory.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,7 +569,6 @@
 			files = (
 				31639F9426A99DD800F5D0E7 /* LaunchScreen.storyboard in Resources */,
 				31639F9126A99DD800F5D0E7 /* Assets.xcassets in Resources */,
-				31639F8F26A99DD500F5D0E7 /* Main.storyboard in Resources */,
 				3163A01826A9B50600F5D0E7 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,8 +594,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31639F8C26A99DD500F5D0E7 /* ViewController.swift in Sources */,
+				3116F13326AABA94003013A6 /* Dependencies.swift in Sources */,
+				3116F14E26AAC94C003013A6 /* Protocol.swift in Sources */,
+				312FDBB426A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift in Sources */,
+				3116F14326AABE8D003013A6 /* CoordinateVC.swift in Sources */,
+				3116F15F26AB0C05003013A6 /* CoordinateViewModel.swift in Sources */,
+				312FDBB626A9E643007BB4C2 /* HomeVC+ViewFactory.swift in Sources */,
+				3116F14C26AAC913003013A6 /* PersistenceError.swift in Sources */,
+				3116F15A26AAF220003013A6 /* AirQualityModel.swift in Sources */,
+				3116F13F26AABE16003013A6 /* AirQualityVC.swift in Sources */,
+				31639F8C26A99DD500F5D0E7 /* HomeVC.swift in Sources */,
+				3116F14126AABE4A003013A6 /* AirQualityVC+ViewFactory.swift in Sources */,
 				31639F8826A99DD500F5D0E7 /* AppDelegate.swift in Sources */,
+				3116F15526AACBE4003013A6 /* AirQualityServiceImpl.swift in Sources */,
+				3116F15326AACB55003013A6 /* CoordinateServiceImpl.swift in Sources */,
+				3116F15826AAF204003013A6 /* CoordinateModel.swift in Sources */,
+				3116F15D26AB0437003013A6 /* ClientServiceImpl.swift in Sources */,
 				31639F8A26A99DD500F5D0E7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,14 +646,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		31639F8D26A99DD500F5D0E7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				31639F8E26A99DD500F5D0E7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		31639F9226A99DD800F5D0E7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
