@@ -6,15 +6,16 @@
 //
 
 import Foundation
-class CoordinateViewModel : CoordinateViewModelProtocol {
+class CoordinateViewModel : BaseViewModel , CoordinateViewModelProtocol{
     
     var onChanged: ((String,String) -> ())?
     var onError: ((String) -> ())?
     var onDone: (() -> ())?
+   var onInitializedMap: ((Double, Double) -> ())?
     var onNavigator: ((CoordinateHistoryViewModel) -> ())?
     var actions: [Int : Int] = [:]
     private var requestType : EnumType = .LAT
-    private var lat : String?, lon : String?
+    private var lat : String = "10.823370", lon : String = "106.638580"
     var coordinateHistory: CoordinateHistoryViewModel = CoordinateHistoryViewModel()
     private var coordinateService : CoordinateService?
     private var airQualityService  : AirQualityService?
@@ -28,9 +29,16 @@ class CoordinateViewModel : CoordinateViewModelProtocol {
         self.actions = actions
     }
     
-    func fetchingCoordinateData(lat: String, lon: String) {
+    func setLocation(lat: String, lon: String) {
         self.lat = lat
         self.lon = lon
+    }
+    
+    func initilizedUI() {
+        onInitializedMap?(Double(lat) ?? 0,Double(lon) ?? 0)
+    }
+    
+    func fetchingCoordinateData(lat: String, lon: String) {
         coordinateService?.fetchingData(lat: lat, lon: lon, completion: { [weak self] (data, error) in
             self?.airQualityService?.fetchingData(lat: lat, lon: lon, completion: { airQualityData, airQualityError in
                 guard let mData = data, let mDataAirQuality = airQualityData?.data else {
@@ -40,7 +48,7 @@ class CoordinateViewModel : CoordinateViewModelProtocol {
                 if let address = mData.localityInfo?.administrative{
                     let name : String  = address.suffix(2).reduce("") { data1, data2 in
                         if data1.isEmpty{
-                            return "\(data1) \(data2.name)"
+                            return "\(data1)\(data2.name)"
                         }
                         return "\(data1), \(data2.name)"
                     }
@@ -54,12 +62,10 @@ class CoordinateViewModel : CoordinateViewModelProtocol {
     }
     
     func handleSendCoordinate() {
-        if let mLat = lat, let mLon = lon {
-            if requestType == .LAT{
-                coordinateService?.sendLat(value: mLat)
-            }else{
-                coordinateService?.sendLon(value: mLon)
-            }
+        if requestType == .LAT{
+            coordinateService?.sendLat(value: lat)
+        }else{
+            coordinateService?.sendLon(value: lon)
         }
         if actions.count>1 {
             onNavigator?(coordinateHistory)

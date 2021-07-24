@@ -15,21 +15,24 @@ class HomeVC : UIViewController {
     lazy var latButton : UIButton = {
         let view : UIButton = UIButton()
         view.setTitle("Set Lat", for: .normal)
-        view.setTitleColor(.black, for: .normal)
+        view.setTitleColor(.blue, for: .normal)
+        view.makeCorner(UIColor.orange.cgColor)
         return view
     }()
     
     lazy var lonButton : UIButton = {
         let view : UIButton = UIButton()
         view.setTitle("Set Lon", for: .normal)
-        view.setTitleColor(.black, for: .normal)
+        view.setTitleColor(.blue, for: .normal)
+        view.makeCorner(UIColor.orange.cgColor)
         return view
     }()
     
     lazy var clearButton : UIButton = {
         let view : UIButton = UIButton()
         view.setTitle("Clear", for: .normal)
-        view.setTitleColor(.black, for: .normal)
+        view.setTitleColor(.blue, for: .normal)
+        view.makeCorner(UIColor.orange.cgColor)
         return view
     }()
     
@@ -50,8 +53,9 @@ class HomeVC : UIViewController {
     lazy var stackViewAction : UIStackView = {
         let view : UIStackView = UIStackView()
         view.axis = .horizontal
-        view.distribution = .equalSpacing
+        view.distribution = .fillEqually
         view.alignment = .fill
+        view.spacing = 20
         return view
     }()
     
@@ -69,18 +73,14 @@ class HomeVC : UIViewController {
         viewModel.addAction(action: .LAT)
         let vc = CoordinateVC(requestType: .LAT,action : viewModel.actions)
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true) {
-            
-        }
+        self.present(vc, animated: true,completion: nil)
     }
     
     @objc func tappedSetLon(){
         viewModel.addAction(action: .LON)
         let vc = CoordinateVC(requestType: .LON,action: viewModel.actions)
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true) {
-            
-        }
+        self.present(vc, animated: true,completion: nil)
     }
     
     @objc func tappedClear(){

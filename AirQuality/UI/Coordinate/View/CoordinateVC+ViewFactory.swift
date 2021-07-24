@@ -17,9 +17,6 @@ extension CoordinateVC {
     private func setupConstraint(){
         self.view.addSubview(mapView)
         // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: 10.823370, longitude: 106.638580)
-        marker.map = mapView
         //MARK: close button
         self.view.addSubview(closeButton)
         closeButton.addTarget(self, action: #selector(tappedClose), for: .touchUpInside)

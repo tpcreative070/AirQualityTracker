@@ -7,6 +7,7 @@
 
 import Foundation
 import RxSwift
+import UIKit
 
 protocol CoordinateService {
     var onObjectLat : Observable<String?> {get}
@@ -28,7 +29,10 @@ protocol ClientService {
 
 protocol CoordinateViewModelProtocol {
     func fetchingCoordinateData(lat : String, lon : String)
+    func setLocation(lat : String, lon : String)
     func handleSendCoordinate()
+    func initilizedUI()
+    var onInitializedMap : ((Double,Double) ->())? {get}
     var onDone : (()->())? {get}
     var onNavigator : ((CoordinateHistoryViewModel) ->())? {get}
     func setRequestType(type : EnumType,actions : [Int:Int])
@@ -50,6 +54,8 @@ protocol CoordinateHistoryViewModelProtocol {
     var airQualityView : String {get}
     var latView : String {get}
     var lonView : String {get}
+    var latOrginal : String {get}
+    var lonOriginal : String {get}
 }
 
 protocol AirQualityViewModelProtocol {
@@ -58,4 +64,13 @@ protocol AirQualityViewModelProtocol {
     var onAddress : ((String) -> ())? {get}
     var onAirQuality : ((String) -> ())? {get}
     func handleDisplayData()
+}
+
+protocol CoordinateHistoryVCViewModelProtocol {
+    var data : [CoordinateHistoryViewModel] {get set}
+    var onNavigator : ((CoordinateHistoryViewModel) ->())? {get}
+}
+
+protocol TableViewCellDelegate {
+    func viewSelected(cell: CoordinateHistoryTableViewCell)
 }

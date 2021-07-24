@@ -10,19 +10,27 @@ import Foundation
 class CoordinateHistoryViewModel : CoordinateHistoryViewModelProtocol {
     
     var latView: String {
-        return lat ?? "10.823370"
+        return "Lat: \(lat ?? "null")"
     }
     
     var lonView: String {
-        return lon ?? "106.638580"
+        return "Lon: \(lon ?? "null")"
     }
     
     var addressView: String {
-        return address ?? ""
+        return "Address: \(address ?? "null")"
     }
     
     var airQualityView: String {
-        return airQuality ?? "0"
+        return "Aqi: \(airQuality ?? "null")"
+    }
+    
+    var latOrginal: String {
+        return lat ?? "0"
+    }
+    
+    var lonOriginal: String {
+        return lon ?? "0"
     }
     
     private var address : String?
