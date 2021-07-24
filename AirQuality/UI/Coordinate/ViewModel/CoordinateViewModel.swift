@@ -8,29 +8,63 @@
 import Foundation
 class CoordinateViewModel : CoordinateViewModelProtocol {
     
-    var onChanged: ((String) -> ())?
+    var onChanged: ((String,String) -> ())?
     var onError: ((String) -> ())?
-    
+    var onDone: (() -> ())?
+    var onNavigator: ((CoordinateHistoryViewModel) -> ())?
+    var actions: [Int : Int] = [:]
+    private var requestType : EnumType = .LAT
+    private var lat : String?, lon : String?
+    var coordinateHistory: CoordinateHistoryViewModel = CoordinateHistoryViewModel()
     private var coordinateService : CoordinateService?
-    init(service : CoordinateService) {
-        self.coordinateService = service
+    private var airQualityService  : AirQualityService?
+    init(_ coordinateService : CoordinateService,_ airQualityService : AirQualityService) {
+        self.coordinateService = coordinateService
+        self.airQualityService = airQualityService
+    }
+    
+    func setRequestType(type: EnumType,actions : [Int:Int]) {
+        self.requestType = type
+        self.actions = actions
     }
     
     func fetchingCoordinateData(lat: String, lon: String) {
+        self.lat = lat
+        self.lon = lon
         coordinateService?.fetchingData(lat: lat, lon: lon, completion: { [weak self] (data, error) in
-            guard let mData = data else {
-                self?.onError?(error.debugDescription)
-                return
-            }
-            if let address = mData.localityInfo?.administrative {
-                let name : String  = address.suffix(2).reduce("") { data1, data2 in
-                    if data1.isEmpty{
-                        return "\(data1) \(data2.name)"
-                    }
-                    return "\(data1), \(data2.name)"
+            self?.airQualityService?.fetchingData(lat: lat, lon: lon, completion: { airQualityData, airQualityError in
+                guard let mData = data, let mDataAirQuality = airQualityData?.data else {
+                    self?.onError?(error.debugDescription)
+                    return
                 }
-                self?.onChanged?(name)
-            }
+                if let address = mData.localityInfo?.administrative{
+                    let name : String  = address.suffix(2).reduce("") { data1, data2 in
+                        if data1.isEmpty{
+                            return "\(data1) \(data2.name)"
+                        }
+                        return "\(data1), \(data2.name)"
+                    }
+                    let airQuality = "\(mDataAirQuality.aqi ?? 0)"
+                    self?.coordinateHistory = CoordinateHistoryViewModel(address: name, airQuality: airQuality, lat: lat, lon: lon)
+                    SharedData.instance.add(vm: self?.coordinateHistory)
+                    self?.onChanged?(name,airQuality)
+                }
+            })
         })
+    }
+    
+    func handleSendCoordinate() {
+        if let mLat = lat, let mLon = lon {
+            if requestType == .LAT{
+                coordinateService?.sendLat(value: mLat)
+            }else{
+                coordinateService?.sendLon(value: mLon)
+            }
+        }
+        if actions.count>1 {
+            onNavigator?(coordinateHistory)
+        }else{
+            onDone?()
+        }
     }
 }

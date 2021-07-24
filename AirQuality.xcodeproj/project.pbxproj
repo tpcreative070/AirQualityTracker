@@ -19,6 +19,7 @@
 		3116F15A26AAF220003013A6 /* AirQualityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F15926AAF220003013A6 /* AirQualityModel.swift */; };
 		3116F15D26AB0437003013A6 /* ClientServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F15C26AB0437003013A6 /* ClientServiceImpl.swift */; };
 		3116F15F26AB0C05003013A6 /* CoordinateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F15E26AB0C05003013A6 /* CoordinateViewModel.swift */; };
+		3116F16126AB2D62003013A6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F16026AB2D62003013A6 /* HomeViewModel.swift */; };
 		312FDBB426A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312FDBB326A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift */; };
 		312FDBB626A9E643007BB4C2 /* HomeVC+ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312FDBB526A9E643007BB4C2 /* HomeVC+ViewFactory.swift */; };
 		31639F8826A99DD500F5D0E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31639F8726A99DD500F5D0E7 /* AppDelegate.swift */; };
@@ -59,6 +60,11 @@
 		3163A02D26A9B66000F5D0E7 /* RxCocoa.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A02226A9B65F00F5D0E7 /* RxCocoa.xcframework */; };
 		3163A02E26A9B66000F5D0E7 /* RxRelay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A02326A9B66000F5D0E7 /* RxRelay.xcframework */; };
 		3163A03026A9B91800F5D0E7 /* SnapKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A02F26A9B91800F5D0E7 /* SnapKit.xcframework */; };
+		316422C626ABDA3900CCFD90 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316422C526ABDA3900CCFD90 /* BaseViewModel.swift */; };
+		316422C926ABE03400CCFD90 /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316422C826ABE03400CCFD90 /* Button+Extension.swift */; };
+		316422CB26AC0CBE00CCFD90 /* CoordinateHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316422CA26AC0CBE00CCFD90 /* CoordinateHistoryViewModel.swift */; };
+		316422CD26AC0FF500CCFD90 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316422CC26AC0FF500CCFD90 /* SharedData.swift */; };
+		316422CF26AC127800CCFD90 /* AirQualityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316422CE26AC127800CCFD90 /* AirQualityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +110,7 @@
 		3116F15926AAF220003013A6 /* AirQualityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityModel.swift; sourceTree = "<group>"; };
 		3116F15C26AB0437003013A6 /* ClientServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientServiceImpl.swift; sourceTree = "<group>"; };
 		3116F15E26AB0C05003013A6 /* CoordinateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateViewModel.swift; sourceTree = "<group>"; };
+		3116F16026AB2D62003013A6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		312FDBB326A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoordinateVC+ViewFactory.swift"; sourceTree = "<group>"; };
 		312FDBB526A9E643007BB4C2 /* HomeVC+ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+ViewFactory.swift"; sourceTree = "<group>"; };
 		31639F8426A99DD500F5D0E7 /* AirQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +157,11 @@
 		3163A02226A9B65F00F5D0E7 /* RxCocoa.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RxCocoa.xcframework; sourceTree = "<group>"; };
 		3163A02326A9B66000F5D0E7 /* RxRelay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RxRelay.xcframework; sourceTree = "<group>"; };
 		3163A02F26A9B91800F5D0E7 /* SnapKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SnapKit.xcframework; sourceTree = "<group>"; };
+		316422C526ABDA3900CCFD90 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		316422C826ABE03400CCFD90 /* Button+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
+		316422CA26AC0CBE00CCFD90 /* CoordinateHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateHistoryViewModel.swift; sourceTree = "<group>"; };
+		316422CC26AC0FF500CCFD90 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
+		316422CE26AC127800CCFD90 /* AirQualityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				3116F15E26AB0C05003013A6 /* CoordinateViewModel.swift */,
+				316422CA26AC0CBE00CCFD90 /* CoordinateHistoryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -280,6 +293,7 @@
 		3116F13C26AABDE3003013A6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				316422CE26AC127800CCFD90 /* AirQualityViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -305,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				3116F15C26AB0437003013A6 /* ClientServiceImpl.swift */,
+				316422CC26AC0FF500CCFD90 /* SharedData.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -334,6 +349,7 @@
 		31639F8626A99DD500F5D0E7 /* AirQuality */ = {
 			isa = PBXGroup;
 			children = (
+				316422C726ABE01E00CCFD90 /* Extension */,
 				3116F15B26AB042A003013A6 /* DataManager */,
 				3116F15126AACB1E003013A6 /* Impl */,
 				3116F13526AABBCF003013A6 /* Dependencies */,
@@ -416,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				3116F14B26AAC913003013A6 /* PersistenceError.swift */,
+				316422C526ABDA3900CCFD90 /* BaseViewModel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -425,19 +442,19 @@
 			children = (
 				3116F13726AABC6C003013A6 /* AirQuality */,
 				3116F13626AABC62003013A6 /* Coordinate */,
-				3163A03626A9CA7900F5D0E7 /* Main */,
+				3163A03626A9CA7900F5D0E7 /* Home */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		3163A03626A9CA7900F5D0E7 /* Main */ = {
+		3163A03626A9CA7900F5D0E7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				3163A03926A9CA8D00F5D0E7 /* View */,
 				3163A03826A9CA8700F5D0E7 /* ViewModel */,
 				3163A03726A9CA8300F5D0E7 /* Model */,
 			);
-			path = Main;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		3163A03726A9CA8300F5D0E7 /* Model */ = {
@@ -450,6 +467,7 @@
 		3163A03826A9CA8700F5D0E7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3116F16026AB2D62003013A6 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -461,6 +479,14 @@
 				312FDBB526A9E643007BB4C2 /* HomeVC+ViewFactory.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		316422C726ABE01E00CCFD90 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				316422C826ABE03400CCFD90 /* Button+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -595,6 +621,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3116F13326AABA94003013A6 /* Dependencies.swift in Sources */,
+				316422C926ABE03400CCFD90 /* Button+Extension.swift in Sources */,
+				3116F16126AB2D62003013A6 /* HomeViewModel.swift in Sources */,
 				3116F14E26AAC94C003013A6 /* Protocol.swift in Sources */,
 				312FDBB426A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift in Sources */,
 				3116F14326AABE8D003013A6 /* CoordinateVC.swift in Sources */,
@@ -607,9 +635,13 @@
 				3116F14126AABE4A003013A6 /* AirQualityVC+ViewFactory.swift in Sources */,
 				31639F8826A99DD500F5D0E7 /* AppDelegate.swift in Sources */,
 				3116F15526AACBE4003013A6 /* AirQualityServiceImpl.swift in Sources */,
+				316422C626ABDA3900CCFD90 /* BaseViewModel.swift in Sources */,
+				316422CB26AC0CBE00CCFD90 /* CoordinateHistoryViewModel.swift in Sources */,
 				3116F15326AACB55003013A6 /* CoordinateServiceImpl.swift in Sources */,
+				316422CD26AC0FF500CCFD90 /* SharedData.swift in Sources */,
 				3116F15826AAF204003013A6 /* CoordinateModel.swift in Sources */,
 				3116F15D26AB0437003013A6 /* ClientServiceImpl.swift in Sources */,
+				316422CF26AC127800CCFD90 /* AirQualityViewModel.swift in Sources */,
 				31639F8A26A99DD500F5D0E7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,8 @@ import GoogleMaps
 extension CoordinateVC {
     
     func initUI(){
-       setupConstraint()
+        setupConstraint()
+        setFooterForConstraint()
     }
     
     private func setupConstraint(){
@@ -28,8 +29,27 @@ extension CoordinateVC {
             }
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
             make.trailing.equalTo(self.view.safeAreaLayoutGuide.snp.trailing).offset(-10)
-            make.width.height.equalTo(50)
+            make.height.equalTo(50)
+            make.width.equalTo(80)
         }
+    }
+    
+    private func setFooterForConstraint(){
+        self.view.addSubview(stackViewAction)
+        self.stackViewAction.snp.makeConstraints { [weak self] make in
+            guard let self = self else {
+                return
+            }
+            make.leading.equalTo(self.view).offset(50)
+            make.trailing.equalTo(self.view).offset(-50)
+            make.bottom.equalTo(self.view).offset(-50)
+            make.height.equalTo(50)
+        }
+        stackViewAction.addArrangedSubview(setCoordinateButton)
+        stackViewAction.addArrangedSubview(historyButton)
+        
+        setCoordinateButton.addTarget(self, action: #selector(tappedSet), for: .touchUpInside)
+        historyButton.addTarget(self, action: #selector(tappedHistory), for: .touchUpInside)
     }
     
     func changeMarker(lat : Double, lon : Double){
@@ -44,10 +64,11 @@ extension CoordinateVC {
         }
     }
     
-    func changedAddress(name : String){
+    func changedAddress(name : String,aqi : String){
         self.mapView.clear()
         marker = GMSMarker()
         marker.title = name
+        marker.snippet = "Air Quality: \(aqi)"
         marker.appearAnimation = .pop
         marker.groundAnchor = CGPoint(x: 0.5, y: 0.5)
         marker.position = currentCoordinate

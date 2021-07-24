@@ -9,8 +9,8 @@ import Foundation
 import RxSwift
 
 protocol CoordinateService {
-    var objectLat : Observable<String> {get}
-    var objectLon : Observable<String> {get}
+    var onObjectLat : Observable<String?> {get}
+    var onObjectLon : Observable<String?> {get}
     func sendLat(value : String)
     func sendLon(value : String)
     func fetchingData(lat : String, lon : String,completion : @escaping (CoordinateModel?, Error?) -> Void)
@@ -28,10 +28,34 @@ protocol ClientService {
 
 protocol CoordinateViewModelProtocol {
     func fetchingCoordinateData(lat : String, lon : String)
-    var onChanged : ((String)->())? {get}
+    func handleSendCoordinate()
+    var onDone : (()->())? {get}
+    var onNavigator : ((CoordinateHistoryViewModel) ->())? {get}
+    func setRequestType(type : EnumType,actions : [Int:Int])
+    var actions : [Int:Int] {get set}
+    var onChanged : ((String,String)->())? {get}
     var onError : ((String)->())? {get}
 }
 
+protocol HomeViewModelProtocol {
+    var onChangedLat : ((String) -> ())? {get}
+    var onChangedLon : ((String) -> ())? {get}
+    var actions : [Int:Int] {get set}
+    func addAction(action : EnumType)
+    func handleReset()
+}
+
+protocol CoordinateHistoryViewModelProtocol {
+    var addressView : String {get}
+    var airQualityView : String {get}
+    var latView : String {get}
+    var lonView : String {get}
+}
+
 protocol AirQualityViewModelProtocol {
-    
+    var onLat : ((String)->())? {get}
+    var onLon : ((String) -> ())? {get}
+    var onAddress : ((String) -> ())? {get}
+    var onAirQuality : ((String) -> ())? {get}
+    func handleDisplayData()
 }

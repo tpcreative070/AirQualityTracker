@@ -10,6 +10,7 @@ class Dependencies {
     static var instance : Dependencies = Dependencies()
     
     static var coordinateService : CoordinateService = instance.internalCoordinateService
+    static var airQualityService : AirQualityService = instance.internalAirQuality
     static var clientService : ClientService = instance.internalClientService
     
         
