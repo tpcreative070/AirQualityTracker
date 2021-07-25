@@ -10,21 +10,24 @@ class CoordinateHistoryTableViewCell : UITableViewCell {
     var delegate : TableViewCellDelegate?
     lazy var addressLabel : UILabel = {
         let view = UILabel()
+        view.textColor = .blue
         return view
     }()
     
     lazy var airQualityLabel : UILabel = {
         let view = UILabel()
+        view.textColor = .purple
         return view
     }()
     
-    lazy var latLabel : UILabel = {
+    lazy var coordinateLabel : UILabel = {
         let view = UILabel()
         return view
     }()
     
-    lazy var lonLabel : UILabel = {
+    lazy var createdDateLabel : UILabel = {
         let view = UILabel()
+        view.textColor = .gray
         return view
     }()
     
@@ -49,8 +52,8 @@ class CoordinateHistoryTableViewCell : UITableViewCell {
     func set(_ vm : CoordinateHistoryViewModelProtocol){
         self.addressLabel.text = vm.addressView
         self.airQualityLabel.text = vm.airQualityView
-        self.latLabel.text = vm.latView
-        self.lonLabel.text = vm.lonView
+        self.coordinateLabel.text = vm.coordinateView
+        self.createdDateLabel.text = vm.createdDateTimeView
     }
     
     @objc func tappedCell() {

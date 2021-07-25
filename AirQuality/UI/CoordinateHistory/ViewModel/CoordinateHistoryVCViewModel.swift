@@ -10,7 +10,7 @@ class CoordinateHistoryVCViewModel : CoordinateHistoryVCViewModelProtocol{
     var data: [CoordinateHistoryViewModel] = []
     var onNavigator: ((CoordinateHistoryViewModel) -> ())?
     init() {
-        data.append(contentsOf: SharedData.instance.getData())
+        data.append(contentsOf: SharedData.instance.getData().reversed())
     }
     
     func handleItem(position : Int){

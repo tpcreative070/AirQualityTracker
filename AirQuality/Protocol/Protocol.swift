@@ -55,6 +55,8 @@ protocol CoordinateHistoryViewModelProtocol {
     var airQualityView : String {get}
     var latView : String {get}
     var lonView : String {get}
+    var coordinateView : String {get}
+    var createdDateTimeView : String {get}
     var latOrginal : String {get}
     var lonOriginal : String {get}
 }

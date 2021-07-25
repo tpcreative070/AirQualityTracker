@@ -41,8 +41,8 @@ extension AirQualityVC  {
         self.view.addSubview(stackViewDisplay)
         stackViewDisplay.snp.makeConstraints { (make) -> Void in
             make.height.equalTo(50)
-            make.leading.equalTo(self.view).offset(50)
-            make.trailing.equalTo(self.view).offset(-50)
+            make.leading.equalTo(self.view).offset(20)
+            make.trailing.equalTo(self.view).offset(-20)
             make.bottom.equalTo(stackViewLocation).offset(50)
         }
         

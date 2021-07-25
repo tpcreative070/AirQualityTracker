@@ -20,13 +20,13 @@ extension CoordinateHistoryTableViewCell {
             }
             make.leading.equalTo(self).offset(20)
             make.trailing.equalTo(self).offset(-20)
-            make.top.equalTo(self).offset(5)
-            make.bottom.equalTo(self).offset(-5)
+            make.top.equalTo(self).offset(10)
+            make.bottom.equalTo(self).offset(-10)
         }
         stackView.addArrangedSubview(addressLabel)
         stackView.addArrangedSubview(airQualityLabel)
-        stackView.addArrangedSubview(latLabel)
-        stackView.addArrangedSubview(lonLabel)
+        stackView.addArrangedSubview(coordinateLabel)
+        stackView.addArrangedSubview(createdDateLabel)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tappedCell))
         self.addGestureRecognizer(tapGesture)
     }

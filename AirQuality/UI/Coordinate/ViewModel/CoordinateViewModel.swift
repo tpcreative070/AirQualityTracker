@@ -66,9 +66,9 @@ class CoordinateViewModel : BaseViewModel , CoordinateViewModelProtocol{
     
     func handleSendCoordinate() {
         if requestType == .LAT{
-            coordinateService?.sendLat(value: lat)
+            coordinateService?.sendLat(value: String(lat.prefix(10)))
         }else{
-            coordinateService?.sendLon(value: lon)
+            coordinateService?.sendLon(value: String(lon.prefix(10)))
         }
         if actions.count>1 {
             onNavigator?(coordinateHistory)

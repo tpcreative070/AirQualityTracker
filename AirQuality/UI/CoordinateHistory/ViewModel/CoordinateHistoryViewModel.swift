@@ -17,12 +17,20 @@ class CoordinateHistoryViewModel : CoordinateHistoryViewModelProtocol {
         return "Lon: \(lon ?? "null")"
     }
     
+    var coordinateView: String {
+        return "Lat: \(lat ?? "null") ; Lon \(lon ?? "null")"
+    }
+   
     var addressView: String {
         return "Address: \(address ?? "null")"
     }
     
     var airQualityView: String {
         return "Aqi: \(airQuality ?? "null")"
+    }
+    
+    var createdDateTimeView: String {
+        return createdDateTime ?? ""
     }
     
     var latOrginal: String {
@@ -37,14 +45,23 @@ class CoordinateHistoryViewModel : CoordinateHistoryViewModelProtocol {
     private var airQuality : String?
     private var lat : String?
     private var lon : String?
+    private var createdDateTime : String?
     init(address : String,airQuality : String, lat : String, lon : String) {
-        self.lat = lat
-        self.lon = lon
+        self.lat = lat.prefix(10).description
+        self.lon = lon.prefix(10).description
+        self.createdDateTime = getCurrentDateTime()
         self.address = address
         self.airQuality = airQuality
     }
     
     init() {
         
+    }
+    
+    private func getCurrentDateTime() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
+        let datetime = formatter.string(from: Date())
+        return datetime
     }
 }

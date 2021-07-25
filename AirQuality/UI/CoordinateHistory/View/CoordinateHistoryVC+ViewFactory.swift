@@ -38,7 +38,7 @@ extension CoordinateHistoryVC {
     
     private func setupTableView(){
         tableview.register(CoordinateHistoryTableViewCell.self, forCellReuseIdentifier: "cell")
-        tableview.estimatedRowHeight = 200
+        tableview.estimatedRowHeight = 250
         tableview.separatorStyle = .singleLine
     }
 }

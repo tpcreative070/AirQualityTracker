@@ -35,6 +35,7 @@ class AirQualityVC : UIViewController {
     lazy var addressLabel : UILabel = {
         let view : UILabel = UILabel()
         view.text = "0.0"
+        view.textColor = .blue
         view.textAlignment = .center
         return view
     }()
@@ -42,6 +43,7 @@ class AirQualityVC : UIViewController {
     lazy var airQualityLabel : UILabel = {
         let view : UILabel = UILabel()
         view.text = "0.0"
+        view.textColor = .purple
         view.textAlignment = .center
         return view
     }()
@@ -49,7 +51,7 @@ class AirQualityVC : UIViewController {
     lazy var stackViewDisplay : UIStackView = {
         let view : UIStackView = UIStackView()
         view.axis = .horizontal
-        view.distribution = .fillEqually
+        view.distribution = .equalSpacing
         view.alignment = .fill
         return view
     }()
