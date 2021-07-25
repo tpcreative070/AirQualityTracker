@@ -11,7 +11,8 @@ class CoordinateViewModel : BaseViewModel , CoordinateViewModelProtocol{
     var onChanged: ((String,String) -> ())?
     var onError: ((String) -> ())?
     var onDone: (() -> ())?
-   var onInitializedMap: ((Double, Double) -> ())?
+    var onLoading: ((Bool) -> ())?
+    var onInitializedMap: ((Double, Double) -> ())?
     var onNavigator: ((CoordinateHistoryViewModel) -> ())?
     var actions: [Int : Int] = [:]
     private var requestType : EnumType = .LAT
@@ -39,6 +40,7 @@ class CoordinateViewModel : BaseViewModel , CoordinateViewModelProtocol{
     }
     
     func fetchingCoordinateData(lat: String, lon: String) {
+        self.onLoading?(true)
         coordinateService?.fetchingData(lat: lat, lon: lon, completion: { [weak self] (data, error) in
             self?.airQualityService?.fetchingData(lat: lat, lon: lon, completion: { airQualityData, airQualityError in
                 guard let mData = data, let mDataAirQuality = airQualityData?.data else {
@@ -57,6 +59,7 @@ class CoordinateViewModel : BaseViewModel , CoordinateViewModelProtocol{
                     SharedData.instance.add(vm: self?.coordinateHistory)
                     self?.onChanged?(name,airQuality)
                 }
+                self?.onLoading?(false)
             })
         })
     }

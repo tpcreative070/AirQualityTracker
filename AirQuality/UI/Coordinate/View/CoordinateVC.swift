@@ -8,6 +8,7 @@
 import UIKit
 import GoogleMaps
 import RxSwift
+import PKHUD
 enum EnumType {
     case LAT
     case LON
@@ -19,8 +20,6 @@ class CoordinateVC : UIViewController {
     var currentCoordinate : CLLocationCoordinate2D!
     lazy var mapView : GMSMapView = {
         let view = GMSMapView()
-//        let camera = GMSCameraPosition.camera(withLatitude: 10.823370, longitude:106.638580, zoom: 20)
-//        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
         return view
     }()
     
@@ -90,6 +89,20 @@ class CoordinateVC : UIViewController {
             vc.modalPresentationStyle = .fullScreen
             self?.present(vc, animated: true, completion: nil)
         }
+        
+        viewModel.onLoading = { [weak self] isLoading in
+            guard let _ = self else {
+                return
+            }
+            DispatchQueue.main.async {
+                if isLoading {
+                    HUD.show(.progress)
+                }else{
+                    HUD.hide()
+                }
+            }
+        }
+        
         viewModel.onInitializedMap = { [weak self] lat, lon in
            guard let self = self else {
                return
@@ -102,6 +115,20 @@ class CoordinateVC : UIViewController {
            self.viewModel.fetchingCoordinateData(lat: lat.description, lon: lon.description)
         }
         viewModel.initilizedUI()
+        
+        mapView.rx.didChange.asDriver()
+            .debounce(.seconds(1))
+            .drive(onNext: { [weak self] camera in
+                guard let self = self else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    let mLat = camera.target.latitude
+                    let mLon = camera.target.longitude
+                    self.viewModel.fetchingCoordinateData(lat: String(mLat), lon: String(mLon))
+                }
+            })
+            .disposed(by: viewModel.disbag)
     }
     
     @objc func tappedClose(){
@@ -117,6 +144,10 @@ class CoordinateVC : UIViewController {
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true,completion: nil)
     }
+    
+    deinit {
+        HUD.hide()
+    }
 }
 
 extension CoordinateVC : GMSMapViewDelegate {
@@ -126,7 +157,6 @@ extension CoordinateVC : GMSMapViewDelegate {
             let mLon = mapView.camera.target.longitude
             self.viewModel.setLocation(lat: String(mLat), lon: String(mLon))
             self.changeMarker(lat: mLat, lon: mLon)
-            self.viewModel.fetchingCoordinateData(lat: String(mLat), lon: String(mLon))
         }
     }
 }

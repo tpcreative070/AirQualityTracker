@@ -20,6 +20,8 @@
 		3116F15D26AB0437003013A6 /* ClientServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F15C26AB0437003013A6 /* ClientServiceImpl.swift */; };
 		3116F15F26AB0C05003013A6 /* CoordinateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F15E26AB0C05003013A6 /* CoordinateViewModel.swift */; };
 		3116F16126AB2D62003013A6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F16026AB2D62003013A6 /* HomeViewModel.swift */; };
+		3122E31F26AD3AD20074576B /* GMSMapView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122E31E26AD3AD20074576B /* GMSMapView+Rx.swift */; };
+		3122E32126AD3B150074576B /* GMSMapViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122E32026AD3B150074576B /* GMSMapViewDelegateProxy.swift */; };
 		312FDBB426A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312FDBB326A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift */; };
 		312FDBB626A9E643007BB4C2 /* HomeVC+ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312FDBB526A9E643007BB4C2 /* HomeVC+ViewFactory.swift */; };
 		31639F8826A99DD500F5D0E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31639F8726A99DD500F5D0E7 /* AppDelegate.swift */; };
@@ -119,6 +121,8 @@
 		3116F15C26AB0437003013A6 /* ClientServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientServiceImpl.swift; sourceTree = "<group>"; };
 		3116F15E26AB0C05003013A6 /* CoordinateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateViewModel.swift; sourceTree = "<group>"; };
 		3116F16026AB2D62003013A6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3122E31E26AD3AD20074576B /* GMSMapView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GMSMapView+Rx.swift"; sourceTree = "<group>"; };
+		3122E32026AD3B150074576B /* GMSMapViewDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMSMapViewDelegateProxy.swift; sourceTree = "<group>"; };
 		312FDBB326A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoordinateVC+ViewFactory.swift"; sourceTree = "<group>"; };
 		312FDBB526A9E643007BB4C2 /* HomeVC+ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+ViewFactory.swift"; sourceTree = "<group>"; };
 		31639F8426A99DD500F5D0E7 /* AirQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -500,6 +504,8 @@
 		316422C726ABE01E00CCFD90 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3122E32026AD3B150074576B /* GMSMapViewDelegateProxy.swift */,
+				3122E31E26AD3AD20074576B /* GMSMapView+Rx.swift */,
 				316422C826ABE03400CCFD90 /* Button+Extension.swift */,
 				316422E526AC5AF600CCFD90 /* TableView+Extension.swift */,
 			);
@@ -679,6 +685,7 @@
 				3116F13326AABA94003013A6 /* Dependencies.swift in Sources */,
 				316422C926ABE03400CCFD90 /* Button+Extension.swift in Sources */,
 				316422E026AC30A200CCFD90 /* CoordinateHistoryTableViewCell+ViewFactory.swift in Sources */,
+				3122E31F26AD3AD20074576B /* GMSMapView+Rx.swift in Sources */,
 				3116F16126AB2D62003013A6 /* HomeViewModel.swift in Sources */,
 				3116F14E26AAC94C003013A6 /* Protocol.swift in Sources */,
 				312FDBB426A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift in Sources */,
@@ -700,6 +707,7 @@
 				316422CB26AC0CBE00CCFD90 /* CoordinateHistoryViewModel.swift in Sources */,
 				3116F15326AACB55003013A6 /* CoordinateServiceImpl.swift in Sources */,
 				316422CD26AC0FF500CCFD90 /* SharedData.swift in Sources */,
+				3122E32126AD3B150074576B /* GMSMapViewDelegateProxy.swift in Sources */,
 				3116F15826AAF204003013A6 /* CoordinateModel.swift in Sources */,
 				316422E226AC33CC00CCFD90 /* CoordinateHistoryVCViewModel.swift in Sources */,
 				316422DC26AC2AC000CCFD90 /* CoordinateHistoryTableViewCell.swift in Sources */,

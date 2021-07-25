@@ -39,6 +39,7 @@ protocol CoordinateViewModelProtocol {
     var actions : [Int:Int] {get set}
     var onChanged : ((String,String)->())? {get}
     var onError : ((String)->())? {get}
+    var onLoading : ((Bool)->())? {get}
 }
 
 protocol HomeViewModelProtocol {
