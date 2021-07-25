@@ -9,9 +9,8 @@ import Foundation
 import ObjectMapper
 
 struct CoordinateModel : Mappable {
-    
+
     var localityInfo : LocalityInfoObjectModel?
-    var airQuality : AirqualityModel?
     init?(map: Map) {
         
     }
