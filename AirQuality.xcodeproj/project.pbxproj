@@ -464,16 +464,8 @@
 			children = (
 				3163A03926A9CA8D00F5D0E7 /* View */,
 				3163A03826A9CA8700F5D0E7 /* ViewModel */,
-				3163A03726A9CA8300F5D0E7 /* Model */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		3163A03726A9CA8300F5D0E7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		3163A03826A9CA8700F5D0E7 /* ViewModel */ = {
