@@ -22,6 +22,9 @@
 		3116F16126AB2D62003013A6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F16026AB2D62003013A6 /* HomeViewModel.swift */; };
 		3122E31F26AD3AD20074576B /* GMSMapView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122E31E26AD3AD20074576B /* GMSMapView+Rx.swift */; };
 		3122E32126AD3B150074576B /* GMSMapViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122E32026AD3B150074576B /* GMSMapViewDelegateProxy.swift */; };
+		3122E32326AD65E80074576B /* RxSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3122E32226AD65E80074576B /* RxSwift.xcframework */; };
+		3122E32526AD65FD0074576B /* RxCocoa.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3122E32426AD65FD0074576B /* RxCocoa.xcframework */; };
+		3122E32726AD660B0074576B /* RxRelay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3122E32626AD660B0074576B /* RxRelay.xcframework */; };
 		312FDBB426A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312FDBB326A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift */; };
 		312FDBB626A9E643007BB4C2 /* HomeVC+ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312FDBB526A9E643007BB4C2 /* HomeVC+ViewFactory.swift */; };
 		31639F8826A99DD500F5D0E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31639F8726A99DD500F5D0E7 /* AppDelegate.swift */; };
@@ -52,15 +55,10 @@
 		3163A01326A9B2D600F5D0E7 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A00F26A9B2D600F5D0E7 /* GoogleMaps.framework */; };
 		3163A01826A9B50600F5D0E7 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3163A01726A9B50600F5D0E7 /* GoogleMaps.bundle */; };
 		3163A02426A9B66000F5D0E7 /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A01926A9B64D00F5D0E7 /* Alamofire.xcframework */; };
-		3163A02526A9B66000F5D0E7 /* RxSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A01A26A9B65400F5D0E7 /* RxSwift.xcframework */; };
 		3163A02626A9B66000F5D0E7 /* ObjectMapper.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A01B26A9B65500F5D0E7 /* ObjectMapper.xcframework */; };
-		3163A02726A9B66000F5D0E7 /* XCGLogger.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A01C26A9B65600F5D0E7 /* XCGLogger.xcframework */; };
 		3163A02926A9B66000F5D0E7 /* PKHUD.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A01E26A9B65800F5D0E7 /* PKHUD.xcframework */; };
 		3163A02A26A9B66000F5D0E7 /* AlamofireObjectMapper.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A01F26A9B65900F5D0E7 /* AlamofireObjectMapper.xcframework */; };
 		3163A02B26A9B66000F5D0E7 /* ObjcExceptionBridging.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A02026A9B65900F5D0E7 /* ObjcExceptionBridging.xcframework */; };
-		3163A02C26A9B66000F5D0E7 /* RxBlocking.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A02126A9B65A00F5D0E7 /* RxBlocking.xcframework */; };
-		3163A02D26A9B66000F5D0E7 /* RxCocoa.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A02226A9B65F00F5D0E7 /* RxCocoa.xcframework */; };
-		3163A02E26A9B66000F5D0E7 /* RxRelay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A02326A9B66000F5D0E7 /* RxRelay.xcframework */; };
 		3163A03026A9B91800F5D0E7 /* SnapKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3163A02F26A9B91800F5D0E7 /* SnapKit.xcframework */; };
 		316422C626ABDA3900CCFD90 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316422C526ABDA3900CCFD90 /* BaseViewModel.swift */; };
 		316422C926ABE03400CCFD90 /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316422C826ABE03400CCFD90 /* Button+Extension.swift */; };
@@ -123,6 +121,9 @@
 		3116F16026AB2D62003013A6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		3122E31E26AD3AD20074576B /* GMSMapView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GMSMapView+Rx.swift"; sourceTree = "<group>"; };
 		3122E32026AD3B150074576B /* GMSMapViewDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMSMapViewDelegateProxy.swift; sourceTree = "<group>"; };
+		3122E32226AD65E80074576B /* RxSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RxSwift.xcframework; sourceTree = "<group>"; };
+		3122E32426AD65FD0074576B /* RxCocoa.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RxCocoa.xcframework; sourceTree = "<group>"; };
+		3122E32626AD660B0074576B /* RxRelay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RxRelay.xcframework; sourceTree = "<group>"; };
 		312FDBB326A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoordinateVC+ViewFactory.swift"; sourceTree = "<group>"; };
 		312FDBB526A9E643007BB4C2 /* HomeVC+ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+ViewFactory.swift"; sourceTree = "<group>"; };
 		31639F8426A99DD500F5D0E7 /* AirQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,15 +160,10 @@
 		3163A00F26A9B2D600F5D0E7 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		3163A01726A9B50600F5D0E7 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = AirQuality/Framework/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		3163A01926A9B64D00F5D0E7 /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Alamofire.xcframework; sourceTree = "<group>"; };
-		3163A01A26A9B65400F5D0E7 /* RxSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RxSwift.xcframework; sourceTree = "<group>"; };
 		3163A01B26A9B65500F5D0E7 /* ObjectMapper.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ObjectMapper.xcframework; sourceTree = "<group>"; };
-		3163A01C26A9B65600F5D0E7 /* XCGLogger.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = XCGLogger.xcframework; sourceTree = "<group>"; };
 		3163A01E26A9B65800F5D0E7 /* PKHUD.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PKHUD.xcframework; sourceTree = "<group>"; };
 		3163A01F26A9B65900F5D0E7 /* AlamofireObjectMapper.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = AlamofireObjectMapper.xcframework; sourceTree = "<group>"; };
 		3163A02026A9B65900F5D0E7 /* ObjcExceptionBridging.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ObjcExceptionBridging.xcframework; sourceTree = "<group>"; };
-		3163A02126A9B65A00F5D0E7 /* RxBlocking.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RxBlocking.xcframework; sourceTree = "<group>"; };
-		3163A02226A9B65F00F5D0E7 /* RxCocoa.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RxCocoa.xcframework; sourceTree = "<group>"; };
-		3163A02326A9B66000F5D0E7 /* RxRelay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RxRelay.xcframework; sourceTree = "<group>"; };
 		3163A02F26A9B91800F5D0E7 /* SnapKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SnapKit.xcframework; sourceTree = "<group>"; };
 		316422C526ABDA3900CCFD90 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		316422C826ABE03400CCFD90 /* Button+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
@@ -192,7 +188,6 @@
 				3163A02426A9B66000F5D0E7 /* Alamofire.xcframework in Frameworks */,
 				3163A01326A9B2D600F5D0E7 /* GoogleMaps.framework in Frameworks */,
 				3163A02926A9B66000F5D0E7 /* PKHUD.xcframework in Frameworks */,
-				3163A02E26A9B66000F5D0E7 /* RxRelay.xcframework in Frameworks */,
 				3163A03026A9B91800F5D0E7 /* SnapKit.xcframework in Frameworks */,
 				3163A01226A9B2D600F5D0E7 /* GoogleMapsM4B.framework in Frameworks */,
 				31639FF326A9A60A00F5D0E7 /* UIKit.framework in Frameworks */,
@@ -203,19 +198,18 @@
 				3163A02B26A9B66000F5D0E7 /* ObjcExceptionBridging.xcframework in Frameworks */,
 				31639FEB26A9A5E700F5D0E7 /* libz.tbd in Frameworks */,
 				31639FE926A9A5D900F5D0E7 /* libc++.tbd in Frameworks */,
-				3163A02C26A9B66000F5D0E7 /* RxBlocking.xcframework in Frameworks */,
+				3122E32726AD660B0074576B /* RxRelay.xcframework in Frameworks */,
 				31639FE726A9A5BE00F5D0E7 /* ImageIO.framework in Frameworks */,
+				3122E32526AD65FD0074576B /* RxCocoa.xcframework in Frameworks */,
 				3163A02A26A9B66000F5D0E7 /* AlamofireObjectMapper.xcframework in Frameworks */,
 				31639FE526A9A5B600F5D0E7 /* GLKit.framework in Frameworks */,
 				31639FE326A9A5AC00F5D0E7 /* CoreText.framework in Frameworks */,
 				31639FE126A9A5A300F5D0E7 /* CoreTelephony.framework in Frameworks */,
 				31639FDF26A9A59B00F5D0E7 /* CoreLocation.framework in Frameworks */,
-				3163A02D26A9B66000F5D0E7 /* RxCocoa.xcframework in Frameworks */,
+				3122E32326AD65E80074576B /* RxSwift.xcframework in Frameworks */,
 				31639FDD26A9A59400F5D0E7 /* CoreImage.framework in Frameworks */,
 				31639FDB26A9A58500F5D0E7 /* CoreGraphics.framework in Frameworks */,
 				3163A01026A9B2D600F5D0E7 /* GoogleMapsBase.framework in Frameworks */,
-				3163A02726A9B66000F5D0E7 /* XCGLogger.xcframework in Frameworks */,
-				3163A02526A9B66000F5D0E7 /* RxSwift.xcframework in Frameworks */,
 				31639FD926A9A3AC00F5D0E7 /* CoreData.framework in Frameworks */,
 				31639FD726A9A39700F5D0E7 /* Accelerate.framework in Frameworks */,
 				3163A02626A9B66000F5D0E7 /* ObjectMapper.xcframework in Frameworks */,
@@ -406,17 +400,15 @@
 		31639FB726A99F4800F5D0E7 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				3122E32626AD660B0074576B /* RxRelay.xcframework */,
+				3122E32426AD65FD0074576B /* RxCocoa.xcframework */,
+				3122E32226AD65E80074576B /* RxSwift.xcframework */,
 				3163A02F26A9B91800F5D0E7 /* SnapKit.xcframework */,
 				3163A01926A9B64D00F5D0E7 /* Alamofire.xcframework */,
 				3163A01F26A9B65900F5D0E7 /* AlamofireObjectMapper.xcframework */,
 				3163A02026A9B65900F5D0E7 /* ObjcExceptionBridging.xcframework */,
 				3163A01B26A9B65500F5D0E7 /* ObjectMapper.xcframework */,
 				3163A01E26A9B65800F5D0E7 /* PKHUD.xcframework */,
-				3163A02126A9B65A00F5D0E7 /* RxBlocking.xcframework */,
-				3163A02226A9B65F00F5D0E7 /* RxCocoa.xcframework */,
-				3163A02326A9B66000F5D0E7 /* RxRelay.xcframework */,
-				3163A01A26A9B65400F5D0E7 /* RxSwift.xcframework */,
-				3163A01C26A9B65600F5D0E7 /* XCGLogger.xcframework */,
 				3163A00F26A9B2D600F5D0E7 /* GoogleMaps.framework */,
 				3163A00C26A9B2D200F5D0E7 /* GoogleMapsBase.framework */,
 				3163A00D26A9B2D400F5D0E7 /* GoogleMapsCore.framework */,
