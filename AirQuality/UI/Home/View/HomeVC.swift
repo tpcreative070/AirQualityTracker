@@ -50,6 +50,15 @@ class HomeVC : UIViewController {
         return view
     }()
     
+    lazy var titleLabel : UILabel = {
+        let view : UILabel = UILabel()
+        view.text = "Air Quality Tracker"
+        view.font = UIFont.boldSystemFont(ofSize: 20.0)
+        view.textAlignment = .center
+        view.textColor = .black
+        return view
+    }()
+    
     lazy var stackViewAction : UIStackView = {
         let view : UIStackView = UIStackView()
         view.axis = .horizontal

@@ -14,11 +14,20 @@ extension HomeVC {
     
     private func setupConstraint(){
         self.view.backgroundColor = .white
+        
+        
+        self.view.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(view).offset(200)
+            make.leading.equalTo(view).offset(50)
+            make.trailing.equalTo(view).offset(-50)
+        }
+        
         self.view.addSubview(stackViewAction)
         
         stackViewAction.snp.makeConstraints { (make) -> Void in
             make.height.equalTo(50)
-            make.top.equalTo(view).offset(200)
+            make.bottom.equalTo(titleLabel).offset(100)
             make.leading.equalTo(self.view).offset(50)
             make.trailing.equalTo(self.view).offset(-50)
            
