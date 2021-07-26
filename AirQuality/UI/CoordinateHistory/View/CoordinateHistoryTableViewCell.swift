@@ -7,7 +7,7 @@
 
 import UIKit
 class CoordinateHistoryTableViewCell : UITableViewCell {
-    var delegate : TableViewCellDelegate?
+    weak var delegate : TableViewCellDelegate?
     lazy var addressLabel : UILabel = {
         let view = UILabel()
         view.textColor = .blue

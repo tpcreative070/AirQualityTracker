@@ -42,7 +42,7 @@ class CoordinateViewModel : BaseViewModel , CoordinateViewModelProtocol{
     func fetchingCoordinateData(lat: String, lon: String) {
         self.onLoading?(true)
         coordinateService?.fetchingData(lat: lat, lon: lon, completion: { [weak self] (data, error) in
-            self?.airQualityService?.fetchingData(lat: lat, lon: lon, completion: { airQualityData, airQualityError in
+            self?.airQualityService?.fetchingData(lat: lat, lon: lon, completion: { [weak self] airQualityData, airQualityError in
                 guard let mData = data, let mDataAirQuality = airQualityData?.data else {
                     self?.onError?(error.debugDescription)
                     return
@@ -70,7 +70,7 @@ class CoordinateViewModel : BaseViewModel , CoordinateViewModelProtocol{
         }else{
             coordinateService?.sendLon(value: String(lon.prefix(10)))
         }
-        if actions.count>1 {
+        if actions.count>1{
             onNavigator?(coordinateHistory)
         }else{
             onDone?()

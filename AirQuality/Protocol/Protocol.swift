@@ -28,6 +28,7 @@ protocol ClientService {
 
 
 protocol CoordinateViewModelProtocol {
+    var coordinateHistory: CoordinateHistoryViewModel {get set}
     func fetchingCoordinateData(lat : String, lon : String)
     func setLocation(lat : String, lon : String)
     func handleSendCoordinate()
@@ -74,6 +75,6 @@ protocol CoordinateHistoryVCViewModelProtocol {
     var onNavigator : ((CoordinateHistoryViewModel) ->())? {get}
 }
 
-protocol TableViewCellDelegate {
+protocol TableViewCellDelegate : AnyObject{
     func viewSelected(cell: CoordinateHistoryTableViewCell)
 }

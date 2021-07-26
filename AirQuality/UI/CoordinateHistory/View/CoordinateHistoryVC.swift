@@ -32,7 +32,7 @@ class CoordinateHistoryVC : UIViewController {
     }
     
     func bindTableView() {
-        self.dataSource = CoordinateHistoryDatasource(cellIdentifier: "cell", items: viewModel.data) { cell, vm in
+        self.dataSource = CoordinateHistoryDatasource(cellIdentifier: "cell", items: viewModel.data) {[weak self] cell, vm in
         cell.set(vm)
         cell.delegate = self
       }
@@ -48,7 +48,7 @@ class CoordinateHistoryVC : UIViewController {
     }
     
     @objc func tappedClose(){
-        dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
