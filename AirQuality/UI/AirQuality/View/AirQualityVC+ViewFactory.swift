@@ -38,8 +38,8 @@ extension AirQualityVC  {
         pointAStackView.snp.makeConstraints { (make) -> Void in
             make.leading.equalTo(view).offset(50)
             make.trailing.equalTo(view).offset(-50)
-            make.height.equalTo(150)
-            make.bottom.equalTo(pointATitleLabel).offset(200)
+            make.height.equalTo(100)
+            make.bottom.equalTo(pointATitleLabel).offset(120)
 
         }
         pointAStackView.addArrangedSubview(pointALabel)
@@ -58,8 +58,8 @@ extension AirQualityVC  {
         pointBStackView.snp.makeConstraints { (make) -> Void in
             make.leading.equalTo(self.view).offset(50)
             make.trailing.equalTo(self.view).offset(-50)
-            make.height.equalTo(150)
-            make.bottom.equalTo(pointBTitleLabel).offset(200)
+            make.height.equalTo(100)
+            make.bottom.equalTo(pointBTitleLabel).offset(120)
            
         }
         pointBStackView.addArrangedSubview(pointBLabel)

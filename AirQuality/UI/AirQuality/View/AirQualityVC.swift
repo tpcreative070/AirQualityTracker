@@ -12,14 +12,14 @@ class AirQualityVC : UIViewController {
     lazy var pointATitleLabel : UILabel = {
         let view : UILabel = UILabel()
         view.text = "Point A"
-        view.font = .systemFont(ofSize: 20)
+        view.font = .systemFont(ofSize: 22)
         return view
     }()
     
     lazy var pointBTitleLabel : UILabel = {
         let view : UILabel = UILabel()
         view.text = "Point B"
-        view.font = .systemFont(ofSize: 20)
+        view.font = .systemFont(ofSize: 22)
         return view
     }()
     
