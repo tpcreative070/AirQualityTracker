@@ -12,17 +12,18 @@ import SnapKit
 class HomeVC : UIViewController {
 
     let viewModel = HomeViewModel(service: Dependencies.coordinateService)
-    lazy var latButton : UIButton = {
+ 
+    lazy var pointAButton : UIButton = {
         let view : UIButton = UIButton()
-        view.setTitle("Set Lat", for: .normal)
+        view.setTitle("Point A", for: .normal)
         view.setTitleColor(.blue, for: .normal)
         view.makeCorner(UIColor.orange.cgColor)
         return view
     }()
     
-    lazy var lonButton : UIButton = {
+    lazy var pointButton : UIButton = {
         let view : UIButton = UIButton()
-        view.setTitle("Set Lon", for: .normal)
+        view.setTitle("Point B", for: .normal)
         view.setTitleColor(.blue, for: .normal)
         view.makeCorner(UIColor.orange.cgColor)
         return view
@@ -36,16 +37,16 @@ class HomeVC : UIViewController {
         return view
     }()
     
-    lazy var latLabel : UILabel = {
+    lazy var poinALabel : UILabel = {
         let view : UILabel = UILabel()
-        view.text = "0.0"
+        view.text = ""
         view.textAlignment = .center
         return view
     }()
     
-    lazy var lonLabel : UILabel = {
+    lazy var pointBLabel : UILabel = {
         let view : UILabel = UILabel()
-        view.text = "0.0"
+        view.text = ""
         view.textAlignment = .center
         return view
     }()
@@ -71,23 +72,23 @@ class HomeVC : UIViewController {
     
     lazy var stackViewDisplay : UIStackView = {
         let view : UIStackView = UIStackView()
-        view.axis = .horizontal
+        view.axis = .vertical
         view.distribution = .fillEqually
         view.alignment = .fill
         view.spacing = 10
         return view
     }()
     
-    @objc func tappedSetLat(){
-        viewModel.addAction(action: .LAT)
-        let vc = CoordinateVC(requestType: .LAT,action : viewModel.actions)
+    @objc func tappedPointA(){
+        viewModel.addAction(action: .POINT_A)
+        let vc = CoordinateVC(requestType: .POINT_A,action : viewModel.actions)
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true,completion: nil)
     }
     
-    @objc func tappedSetLon(){
-        viewModel.addAction(action: .LON)
-        let vc = CoordinateVC(requestType: .LON,action: viewModel.actions)
+    @objc func tappedPointB(){
+        viewModel.addAction(action: .POINT_B)
+        let vc = CoordinateVC(requestType: .POINT_B,action: viewModel.actions)
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true,completion: nil)
     }
@@ -104,14 +105,14 @@ class HomeVC : UIViewController {
     
     
     private func bindingEvent(){
-        viewModel.onChangedLat = { [weak self] data in
+        viewModel.onChangedPointA = { [weak self] data in
             DispatchQueue.main.async {
-                self?.latLabel.text = data
+                self?.poinALabel.attributedText = data.attributedStringWithColor(["Point A","{","}"], color: .blue)
             }
         }
-        viewModel.onChangedLon = { [weak self] data in
+        viewModel.onChangedPointB = { [weak self] data in
             DispatchQueue.main.async {
-                self?.lonLabel.text = data
+                self?.pointBLabel.attributedText = data.attributedStringWithColor(["Point B","{","}"], color: .blue)
             }
         }
     }

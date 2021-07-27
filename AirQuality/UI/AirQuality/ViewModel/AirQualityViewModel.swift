@@ -7,27 +7,36 @@
 
 import Foundation
 class AirQualityViewModel : AirQualityViewModelProtocol {
-    var onLat: ((String) -> ())?
+    var onPointA: ((String) -> ())?
     
-    var onLon: ((String) -> ())?
+    var onPointB: ((String) -> ())?
     
-    var onAddress: ((String) -> ())?
+    var onPointAAddress: ((String) -> ())?
     
-    var onAirQuality: ((String) -> ())?
+    var onPointAAirQuality: ((String) -> ())?
     
-    private var coordinateHistorty : CoordinateHistoryViewModel?
+    var onPointBAddress: ((String) -> ())?
+    
+    var onPointBAirQuality: ((String) -> ())?
+    
+    private var pointA: CoordinateHistoryViewModel?
+    private var pointB: CoordinateHistoryViewModel?
   
-    init(data : CoordinateHistoryViewModel) {
-        self.coordinateHistorty = data
+    init(pointA : CoordinateHistoryViewModel?, pointB : CoordinateHistoryViewModel?) {
+        self.pointA = pointA
+        self.pointB = pointB
     }
     
     func handleDisplayData() {
-        guard  let mData = coordinateHistorty else {
+        guard  let mPointA = pointA, let mPointB = pointB else {
             return
         }
-        onLat?(mData.latView)
-        onLon?(mData.lonView)
-        onAddress?(mData.addressView)
-        onAirQuality?(mData.airQualityView)
+        onPointA?(mPointA.pointView)
+        onPointAAddress?(mPointA.addressView)
+        onPointAAirQuality?(mPointA.airQualityView)
+        
+        onPointB?(mPointB.pointView)
+        onPointBAddress?(mPointB.addressView)
+        onPointBAirQuality?(mPointB.airQualityView)
     }
 }

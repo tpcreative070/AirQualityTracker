@@ -10,8 +10,8 @@ import GoogleMaps
 import RxSwift
 import PKHUD
 enum EnumType {
-    case LAT
-    case LON
+    case POINT_A
+    case POINT_B
 }
 class CoordinateVC : UIViewController {
     
@@ -84,8 +84,8 @@ class CoordinateVC : UIViewController {
         viewModel.onDone = { [weak self] in
             self?.dismiss(animated: false, completion: nil)
         }
-        viewModel.onNavigator = { [weak self] data in
-            let vc = AirQualityVC(data: data)
+        viewModel.onNavigator = { [weak self] pointA,pointB in
+            let vc = AirQualityVC(pointA: pointA, pointB: pointB)
             vc.modalPresentationStyle = .fullScreen
             self?.present(vc, animated: true, completion: nil)
         }

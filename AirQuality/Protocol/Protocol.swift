@@ -10,10 +10,10 @@ import RxSwift
 import UIKit
 
 protocol CoordinateService {
-    var onObjectLat : Observable<String?> {get}
-    var onObjectLon : Observable<String?> {get}
-    func sendLat(value : String)
-    func sendLon(value : String)
+    var onObjectPointA : Observable<String?> {get}
+    var onObjectPointB : Observable<String?> {get}
+    func sendPointA(value : String)
+    func sendPointB(value : String)
     func fetchingData(lat : String, lon : String,completion : @escaping (CoordinateModel?, Error?) -> Void)
 }
 
@@ -35,7 +35,7 @@ protocol CoordinateViewModelProtocol {
     func initilizedUI()
     var onInitializedMap : ((Double,Double) ->())? {get}
     var onDone : (()->())? {get}
-    var onNavigator : ((CoordinateHistoryViewModel) ->())? {get}
+    var onNavigator : ((CoordinateHistoryViewModel?,CoordinateHistoryViewModel?) ->())? {get}
     func setRequestType(type : EnumType,actions : [Int:Int])
     var actions : [Int:Int] {get set}
     var onChanged : ((String,String)->())? {get}
@@ -44,8 +44,8 @@ protocol CoordinateViewModelProtocol {
 }
 
 protocol HomeViewModelProtocol {
-    var onChangedLat : ((String) -> ())? {get}
-    var onChangedLon : ((String) -> ())? {get}
+    var onChangedPointA : ((String) -> ())? {get}
+    var onChangedPointB : ((String) -> ())? {get}
     var actions : [Int:Int] {get set}
     func addAction(action : EnumType)
     func handleReset()
@@ -56,6 +56,7 @@ protocol CoordinateHistoryViewModelProtocol {
     var airQualityView : String {get}
     var latView : String {get}
     var lonView : String {get}
+    var pointView : String {get}
     var coordinateView : String {get}
     var createdDateTimeView : String {get}
     var latOrginal : String {get}
@@ -63,10 +64,12 @@ protocol CoordinateHistoryViewModelProtocol {
 }
 
 protocol AirQualityViewModelProtocol {
-    var onLat : ((String)->())? {get}
-    var onLon : ((String) -> ())? {get}
-    var onAddress : ((String) -> ())? {get}
-    var onAirQuality : ((String) -> ())? {get}
+    var onPointA : ((String)->())? {get}
+    var onPointB : ((String) -> ())? {get}
+    var onPointAAddress : ((String) -> ())? {get}
+    var onPointAAirQuality : ((String) -> ())? {get}
+    var onPointBAddress : ((String) -> ())? {get}
+    var onPointBAirQuality : ((String) -> ())? {get}
     func handleDisplayData()
 }
 

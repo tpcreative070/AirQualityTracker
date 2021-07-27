@@ -32,22 +32,22 @@ extension HomeVC {
             make.trailing.equalTo(self.view).offset(-50)
            
         }
-        stackViewAction.addArrangedSubview(latButton)
-        stackViewAction.addArrangedSubview(lonButton)
+        stackViewAction.addArrangedSubview(pointAButton)
+        stackViewAction.addArrangedSubview(pointButton)
         stackViewAction.addArrangedSubview(clearButton)
         
         self.view.addSubview(stackViewDisplay)
         stackViewDisplay.snp.makeConstraints { (make) -> Void in
             make.height.equalTo(50)
-            make.leading.equalTo(self.view).offset(50)
-            make.trailing.equalTo(self.view).offset(-50)
-            make.bottom.equalTo(stackViewAction).offset(50)
+            make.leading.equalTo(self.view).offset(10)
+            make.trailing.equalTo(self.view).offset(-10)
+            make.bottom.equalTo(stackViewAction).offset(70)
         }
-        stackViewDisplay.addArrangedSubview(latLabel)
-        stackViewDisplay.addArrangedSubview(lonLabel)
+        stackViewDisplay.addArrangedSubview(poinALabel)
+        stackViewDisplay.addArrangedSubview(pointBLabel)
        
-        latButton.addTarget(self, action: #selector(tappedSetLat), for: .touchUpInside)
-        lonButton.addTarget(self, action: #selector(tappedSetLon), for: .touchUpInside)
+        pointAButton.addTarget(self, action: #selector(tappedPointA), for: .touchUpInside)
+        pointButton.addTarget(self, action: #selector(tappedPointB), for: .touchUpInside)
         clearButton.addTarget(self, action: #selector(tappedClear), for: .touchUpInside)
     }
 }

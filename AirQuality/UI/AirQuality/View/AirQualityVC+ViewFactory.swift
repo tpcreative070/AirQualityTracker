@@ -9,6 +9,7 @@ import UIKit
 
 extension AirQualityVC  {
     func initUI(){
+        self.view.backgroundColor = .white
         setupConstraint()
     }
     
@@ -25,28 +26,44 @@ extension AirQualityVC  {
             make.width.equalTo(80)
         }
         
-        self.view.backgroundColor = .white
-        self.view.addSubview(stackViewLocation)
-        
-        stackViewLocation.snp.makeConstraints { (make) -> Void in
-            make.height.equalTo(50)
+        self.view.addSubview(pointATitleLabel)
+        pointATitleLabel.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(view).offset(200)
             make.leading.equalTo(self.view).offset(50)
             make.trailing.equalTo(self.view).offset(-50)
+        }
+        
+   
+        self.view.addSubview(pointAStackView)
+        pointAStackView.snp.makeConstraints { (make) -> Void in
+            make.leading.equalTo(view).offset(50)
+            make.trailing.equalTo(view).offset(-50)
+            make.height.equalTo(150)
+            make.bottom.equalTo(pointATitleLabel).offset(200)
+
+        }
+        pointAStackView.addArrangedSubview(pointALabel)
+        pointAStackView.addArrangedSubview(pointAAddressLabel)
+        pointAStackView.addArrangedSubview(pointAAirQualityLabel)
+        
+        
+        self.view.addSubview(pointBTitleLabel)
+        pointBTitleLabel.snp.makeConstraints { (make) -> Void in
+            make.leading.equalTo(self.view).offset(50)
+            make.trailing.equalTo(self.view).offset(-50)
+            make.bottom.equalTo(pointAStackView).offset(50)
+        }
+        
+        self.view.addSubview(pointBStackView)
+        pointBStackView.snp.makeConstraints { (make) -> Void in
+            make.leading.equalTo(self.view).offset(50)
+            make.trailing.equalTo(self.view).offset(-50)
+            make.height.equalTo(150)
+            make.bottom.equalTo(pointBTitleLabel).offset(200)
            
         }
-        stackViewLocation.addArrangedSubview(latLabel)
-        stackViewLocation.addArrangedSubview(lonLabel)
-        
-        self.view.addSubview(stackViewDisplay)
-        stackViewDisplay.snp.makeConstraints { (make) -> Void in
-            make.height.equalTo(50)
-            make.leading.equalTo(self.view).offset(20)
-            make.trailing.equalTo(self.view).offset(-20)
-            make.bottom.equalTo(stackViewLocation).offset(50)
-        }
-        
-        stackViewDisplay.addArrangedSubview(addressLabel)
-        stackViewDisplay.addArrangedSubview(airQualityLabel)
+        pointBStackView.addArrangedSubview(pointBLabel)
+        pointBStackView.addArrangedSubview(pointBAddressLabel)
+        pointBStackView.addArrangedSubview(pointBAirQualityLabel)
     }
 }

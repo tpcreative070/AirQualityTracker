@@ -9,50 +9,79 @@ import UIKit
 
 class AirQualityVC : UIViewController {
     var viewModel : AirQualityViewModel!
-    lazy var latLabel : UILabel = {
+    lazy var pointATitleLabel : UILabel = {
         let view : UILabel = UILabel()
-        view.text = "0.0"
-        view.textAlignment = .center
+        view.text = "Point A"
+        view.font = .systemFont(ofSize: 20)
         return view
     }()
     
-    lazy var lonLabel : UILabel = {
+    lazy var pointBTitleLabel : UILabel = {
         let view : UILabel = UILabel()
-        view.text = "0.0"
-        view.textAlignment = .center
+        view.text = "Point B"
+        view.font = .systemFont(ofSize: 20)
         return view
     }()
     
-    lazy var stackViewLocation : UIStackView = {
+    lazy var pointAStackView : UIStackView = {
         let view : UIStackView = UIStackView()
-        view.axis = .horizontal
-        view.distribution = .equalSpacing
+        view.distribution = .fillEqually
+        view.axis = .vertical
         view.spacing = 20
         view.alignment = .fill
         return view
     }()
     
-    lazy var addressLabel : UILabel = {
+    
+    lazy var pointALabel : UILabel = {
         let view : UILabel = UILabel()
         view.text = "0.0"
         view.textColor = .blue
-        view.textAlignment = .center
         return view
     }()
     
-    lazy var airQualityLabel : UILabel = {
+    lazy var pointBLabel : UILabel = {
+        let view : UILabel = UILabel()
+        view.text = "0.0"
+        view.textColor = .blue
+        return view
+    }()
+    
+    lazy var pointAAddressLabel : UILabel = {
+        let view : UILabel = UILabel()
+        view.text = "0.0"
+        view.textColor = .blue
+        return view
+    }()
+    
+    lazy var pointAAirQualityLabel : UILabel = {
         let view : UILabel = UILabel()
         view.text = "0.0"
         view.textColor = .purple
-        view.textAlignment = .center
         return view
     }()
     
-    lazy var stackViewDisplay : UIStackView = {
+    lazy var pointBAddressLabel : UILabel = {
+        let view : UILabel = UILabel()
+        view.text = "0.0"
+        view.textColor = .blue
+        return view
+    }()
+    
+    lazy var pointBAirQualityLabel : UILabel = {
+        let view : UILabel = UILabel()
+        view.text = "0.0"
+        view.textColor = .purple
+        return view
+    }()
+    
+    
+    lazy var pointBStackView : UIStackView = {
         let view : UIStackView = UIStackView()
-        view.axis = .horizontal
-        view.distribution = .equalSpacing
+        view.axis = .vertical
+        view.distribution = .fillEqually
         view.alignment = .fill
+        view.spacing = 20
         return view
     }()
     
@@ -68,9 +97,9 @@ class AirQualityVC : UIViewController {
         dismiss(animated: false, completion: nil)
     }
     
-    init(data : CoordinateHistoryViewModel) {
+    init(pointA : CoordinateHistoryViewModel?, pointB : CoordinateHistoryViewModel?) {
         super.init(nibName: nil, bundle: nil)
-        viewModel = AirQualityViewModel(data: data)
+        viewModel = AirQualityViewModel(pointA: pointA,pointB : pointB)
     }
     
     required init?(coder: NSCoder) {
@@ -84,18 +113,28 @@ class AirQualityVC : UIViewController {
     }
     
     func bindingEvent(){
-        viewModel.onLat = { [weak self] data in
-            self?.latLabel.text = data
+        viewModel.onPointA = { [weak self] data in
+            self?.pointALabel.text = data
         }
-        viewModel.onLon = { [weak self] data in
-            self?.lonLabel.text = data
+       
+        viewModel.onPointAAddress = { [weak self] data in
+            self?.pointAAddressLabel.text = data
         }
-        viewModel.onAddress = { [weak self] data in
-            self?.addressLabel.text = data
+
+        viewModel.onPointAAirQuality = { [weak self] data in
+            self?.pointAAirQualityLabel.text = data
         }
-        viewModel.onAirQuality = { [weak self] data in
-            self?.airQualityLabel.text = data
+       
+        viewModel.onPointB = { [weak self] data in
+            self?.pointBLabel.text = data
         }
+        viewModel.onPointBAddress = { [weak self] data in
+            self?.pointBAddressLabel.text = data
+        }
+        viewModel.onPointBAirQuality = { [weak self] data in
+            self?.pointBAirQualityLabel.text = data
+        }
+        
         viewModel.handleDisplayData()
     }
 }

@@ -9,6 +9,11 @@ import Foundation
 
 class CoordinateHistoryViewModel : CoordinateHistoryViewModelProtocol {
     
+    var pointView: String {
+        let mValue = "Lat: \(lat?.prefix(10) ?? "null") : Lon: \(lon?.prefix(10) ?? "null")"
+        return mValue
+    }
+    
     var latView: String {
         return "Lat: \(lat ?? "null")"
     }

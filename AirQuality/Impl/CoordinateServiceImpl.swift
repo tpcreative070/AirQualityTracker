@@ -15,22 +15,22 @@ class CoordinateServiceImpl : CoordinateService {
         self.clientService = client
     }
     
-    private let latObservable : BehaviorSubject<String?> = BehaviorSubject<String?>(value: nil)
-    var onObjectLat: Observable<String?> {
-        return latObservable.asObserver()
+    private let pointAObservable : BehaviorSubject<String?> = BehaviorSubject<String?>(value: nil)
+    var onObjectPointA: Observable<String?> {
+        return pointAObservable.asObserver()
     }
     
-    private let lonObservable : BehaviorSubject<String?> = BehaviorSubject<String?>(value: nil)
-    var onObjectLon: Observable<String?> {
-        return lonObservable.asObserver()
+    private let pointBObservable : BehaviorSubject<String?> = BehaviorSubject<String?>(value: nil)
+    var onObjectPointB: Observable<String?> {
+        return pointBObservable.asObserver()
     }
     
-    func sendLat(value: String) {
-        latObservable.onNext(value)
+    func sendPointA(value: String) {
+        pointAObservable.onNext(value)
     }
     
-    func sendLon(value: String) {
-        lonObservable.onNext(value)
+    func sendPointB(value: String) {
+        pointBObservable.onNext(value)
     }
 
     func fetchingData(lat : String, lon : String,completion: @escaping (CoordinateModel?, Error?) -> Void) {

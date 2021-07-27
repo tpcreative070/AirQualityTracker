@@ -27,6 +27,8 @@
 		3122E32726AD660B0074576B /* RxRelay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3122E32626AD660B0074576B /* RxRelay.xcframework */; };
 		312FDBB426A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312FDBB326A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift */; };
 		312FDBB626A9E643007BB4C2 /* HomeVC+ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312FDBB526A9E643007BB4C2 /* HomeVC+ViewFactory.swift */; };
+		315E498D26AFCF4500F63B8E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E498C26AFCF4500F63B8E /* String+Extension.swift */; };
+		315E498F26AFDAD200F63B8E /* SharedPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E498E26AFDAD200F63B8E /* SharedPoint.swift */; };
 		31639F8826A99DD500F5D0E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31639F8726A99DD500F5D0E7 /* AppDelegate.swift */; };
 		31639F8A26A99DD500F5D0E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31639F8926A99DD500F5D0E7 /* SceneDelegate.swift */; };
 		31639F8C26A99DD500F5D0E7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31639F8B26A99DD500F5D0E7 /* HomeVC.swift */; };
@@ -126,6 +128,8 @@
 		3122E32626AD660B0074576B /* RxRelay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RxRelay.xcframework; sourceTree = "<group>"; };
 		312FDBB326A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoordinateVC+ViewFactory.swift"; sourceTree = "<group>"; };
 		312FDBB526A9E643007BB4C2 /* HomeVC+ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+ViewFactory.swift"; sourceTree = "<group>"; };
+		315E498C26AFCF4500F63B8E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		315E498E26AFDAD200F63B8E /* SharedPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPoint.swift; sourceTree = "<group>"; };
 		31639F8426A99DD500F5D0E7 /* AirQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31639F8726A99DD500F5D0E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31639F8926A99DD500F5D0E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -333,6 +337,7 @@
 			children = (
 				3116F15C26AB0437003013A6 /* ClientServiceImpl.swift */,
 				316422CC26AC0FF500CCFD90 /* SharedData.swift */,
+				315E498E26AFDAD200F63B8E /* SharedPoint.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 				3122E31E26AD3AD20074576B /* GMSMapView+Rx.swift */,
 				316422C826ABE03400CCFD90 /* Button+Extension.swift */,
 				316422E526AC5AF600CCFD90 /* TableView+Extension.swift */,
+				315E498C26AFCF4500F63B8E /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -674,6 +680,7 @@
 				3116F14E26AAC94C003013A6 /* Protocol.swift in Sources */,
 				312FDBB426A9E4E8007BB4C2 /* CoordinateVC+ViewFactory.swift in Sources */,
 				316422E426AC351700CCFD90 /* CoordinateHistoryVC+Datasource.swift in Sources */,
+				315E498D26AFCF4500F63B8E /* String+Extension.swift in Sources */,
 				3116F14326AABE8D003013A6 /* CoordinateVC.swift in Sources */,
 				3116F15F26AB0C05003013A6 /* CoordinateViewModel.swift in Sources */,
 				312FDBB626A9E643007BB4C2 /* HomeVC+ViewFactory.swift in Sources */,
@@ -692,6 +699,7 @@
 				3116F15326AACB55003013A6 /* CoordinateServiceImpl.swift in Sources */,
 				316422CD26AC0FF500CCFD90 /* SharedData.swift in Sources */,
 				3122E32126AD3B150074576B /* GMSMapViewDelegateProxy.swift in Sources */,
+				315E498F26AFDAD200F63B8E /* SharedPoint.swift in Sources */,
 				3116F15826AAF204003013A6 /* CoordinateModel.swift in Sources */,
 				316422E226AC33CC00CCFD90 /* CoordinateHistoryVCViewModel.swift in Sources */,
 				316422DC26AC2AC000CCFD90 /* CoordinateHistoryTableViewCell.swift in Sources */,
