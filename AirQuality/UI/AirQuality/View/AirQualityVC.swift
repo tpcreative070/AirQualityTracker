@@ -75,7 +75,6 @@ class AirQualityVC : UIViewController {
         return view
     }()
     
-    
     lazy var pointBStackView : UIStackView = {
         let view : UIStackView = UIStackView()
         view.axis = .vertical
